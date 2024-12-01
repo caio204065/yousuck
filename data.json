@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Song 1",
+    "artist": "Artist 1",
+    "cover": "cover1.jpg",
+    "audio": "song1.mp3",
+    "canva": "canva1.gif"
+  },
+  {
+    "title": "Song 2",
+    "artist": "Artist 2",
+    "cover": "cover2.jpg",
+    "audio": "song2.mp3",
+    "canva": "canva2.gif"
+  }
+]
