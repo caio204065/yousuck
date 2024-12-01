@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(45deg, orange, yellow);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #ffcc00;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  color: #ff6f00;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ff6f00;
+  font-weight: bold;
+}
+
+#now-playing {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+}
+
+#now-playing img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#charts, #playlists, #favorites {
+  padding: 20px;
+}
+
+h2 {
+  color: #ff6f00;
+}
