@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,39 +7,52 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="app">
-    <!-- Menu Lateral -->
-    <aside id="sidebar">
-      <h1>Musicify</h1>
-      <ul>
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#charts">Charts</a></li>
-        <li><a href="#playlists">Playlists</a></li>
-        <li><a href="#favorites">Favorites</a></li>
-      </ul>
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <h1>Musicify</h1>
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="#home" class="active">Início</a></li>
+          <li><a href="#search">Buscar</a></li>
+          <li><a href="#library">Sua Biblioteca</a></li>
+        </ul>
+      </nav>
+      <div class="playlists">
+        <h2>Playlists</h2>
+        <ul>
+          <li><a href="#pop">Pop</a></li>
+          <li><a href="#rock">Rock</a></li>
+          <li><a href="#favorites">Favoritas</a></li>
+        </ul>
+      </div>
     </aside>
 
-    <!-- Conteúdo Principal -->
-    <main id="main-content">
-      <header>
-        <h2>Explore</h2>
+    <!-- Main Content -->
+    <main class="content">
+      <header class="top-bar">
+        <h2>Explorar Músicas</h2>
+        <input type="text" placeholder="Buscar músicas..." class="search-bar">
       </header>
-      <section id="music-list">
-        <!-- Lista de músicas será gerada pelo JavaScript -->
+      <section class="music-grid">
+        <!-- Cards serão gerados dinamicamente -->
       </section>
     </main>
-  </div>
 
-  <footer id="player">
-    <div id="now-playing">
-      <img id="cover" src="" alt="Cover">
-      <div>
-        <h3 id="song-title">Select a Song</h3>
-        <p id="artist-name">Artist</p>
+    <!-- Music Player -->
+    <footer class="player">
+      <div class="now-playing">
+        <img src="" alt="Capa" id="cover">
+        <div class="details">
+          <h3 id="song-title">Escolha uma música</h3>
+          <p id="artist-name">Artista</p>
+        </div>
       </div>
-    </div>
-    <audio id="audio-player" controls></audio>
-  </footer>
+      <audio id="audio-player" controls></audio>
+    </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
