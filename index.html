@@ -1,59 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Musicify</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Web Player</title>
+
+    <!-- Estilos e temas -->
+    <link rel="stylesheet" href="https://open.spotifycdn.com/cdn/build/web-player/pip-mini-player.8b0f3251.css">
 </head>
-<body>
-  <div class="app">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <div class="logo">
-        <h1>Musicify</h1>
-      </div>
-      <nav class="menu">
-        <ul>
-          <li><a href="#home" class="active">Início</a></li>
-          <li><a href="#search">Buscar</a></li>
-          <li><a href="#library">Sua Biblioteca</a></li>
-        </ul>
-      </nav>
-      <div class="playlists">
-        <h2>Playlists</h2>
-        <ul>
-          <li><a href="#pop">Pop</a></li>
-          <li><a href="#rock">Rock</a></li>
-          <li><a href="#favorites">Favoritas</a></li>
-        </ul>
-      </div>
-    </aside>
+<body class="encore-dark-theme encore-layout-themes F9EQJ9z0gxjxglXhzCcg">
+    <div data-react-modal-body-trap="" tabindex="0" style="position: absolute; opacity: 0;"></div>
+    <div class="body-drag-top"></div>
 
-    <!-- Main Content -->
-    <main class="content">
-      <header class="top-bar">
-        <h2>Explorar Músicas</h2>
-        <input type="text" placeholder="Buscar músicas..." class="search-bar">
-      </header>
-      <section class="music-grid">
-        <!-- Cards serão gerados dinamicamente -->
-      </section>
-    </main>
+    <!-- Configuração -->
+    <script id="config" data-testid="config" type="application/json">
+        {"appName":"web_player_prototype","market":"BR","locale":{"locale":"pt-BR","rtl":false,"textDirection":"ltr"},"userCountry":"BR","isPremium":false,"correlationId":"5f1c75bdeac667fc7041190bf7d950f2","isAnonymous":false,"gtmId":"GTM-PZHN3VD","optimizeId":"GTM-W53X654","pipResources":{"scripts":["https://open.spotifycdn.com/cdn/build/web-player/vendor~web-player.2e288442.js","https://open.spotifycdn.com/cdn/build/web-player/pip-mini-player.afe0b93d.js"],"styles":["https://open.spotifycdn.com/cdn/build/web-player/pip-mini-player.8b0f3251.css"]},"retargetingPixels":null,"recaptchaWebPlayerFraudSiteKey":"6LfCVLAUAAAAALFwwRnnCJ12DalriUGbj8FW_J39"}
+    </script>
 
-    <!-- Music Player -->
-    <footer class="player">
-      <div class="now-playing">
-        <img src="" alt="Capa" id="cover">
-        <div class="details">
-          <h3 id="song-title">Escolha uma música</h3>
-          <p id="artist-name">Artista</p>
-        </div>
-      </div>
-      <audio id="audio-player" controls></audio>
-    </footer>
-  </div>
+    <script id="session" data-testid="session" type="application/json">
+        {"accessToken":"BQB4YtbNGZFNH00IwxHeXpnTxq68QzhYe-CjVLtaOYZtzxDq3HZ6CK2u8JNymnmHvuebiz0ov1Kf5bHfLHHxG2L39-SORdVzdXpXbNlqqa0QiCAqjaIKsVH1MX7EL4xItFXUq0BJeBUDHiRAHjLqtLrCsRp2l6mRw7929-WwGEU1_NhfdU5Bw2XKIydmhXRSqC_pOVYbxY-s-6URLvVU7EY-Nr4F05-2zNXVZ-Knay-cJG-rgfdEevTQCV6qDWq_Nez2kxOzScAhX8kElIYFbwEDHQULyueP_j9hmXXhiV_59gsESzNz3y2RZNkQcqXoUN_Z4oWTMXugCUck0X6MTqEwYSYJD83q9Rap","accessTokenExpirationTimestampMs":1733075233532,"isAnonymous":false,"clientId":"d8a5ed958d274c2e8ee717e6a4b0971d"}
+    </script>
 
-  <script src="script.js"></script>
+    <script id="features" type="application/json">
+        {"enableShows":true,"isTracingEnabled":false,"upgradeButton":"control","mwp":false,"isMWPErrorCodeEnabled":false,"isMwpRadioEntity":true,"isMWPAndPlaybackCapable":false,"preauthRecaptcha":false,"isEqualizerABEnabled":false,"isPodcastEnabled":true,"enableI18nLocales":true,"isI18nAdditionalPagesEnabled":false,"isInteractionLoggerEnabled":false,"isReinventFreeEnabled":false,"isEntityReportEnabled":true,"isAlbumReportEnabled":false,"isTrackReportEnabled":false,"isPodcastShowReportEnabled":false,"isPodcastEpisodeReportEnabled":false}
+    </script>
+
+    <!-- SEO -->
+    <script id="seo" type="application/json">
+        {"profile":{}}
+    </script>
+
+    <!-- Configurações remotas -->
+    <script id="remote-configuration" type="text/plain">
+        eyIjdiI6IjEiLCJlbmFibGVJTFJQbGF5bGlzdERXUCI6ImJvdGgtYmVsb3ciLCJlbmFibGVTdWJ0aXRsZXNVc2luZ0hhcm1vbnkiOnRydWUsImVuYWJsZUZ1bGxzY3JlZW5Nb2RlIjp0cnVlLCJlbmFibGVJMThuUm91dGVzIjoidmFyaWFudCIsImVuYWJsZU5wdkFib3V0UG9kY2FzdCI6dHJ1ZSwiZW5hYmxlQ29uY2VydHNOZWFyWW91Ijp0cnVlLCJlbmFibGVOcHZDcmVkaXRzSW1wcmVzc2lvbnMiOnRydWUsImVuYWJsZUx5cmljc1Vwc2VsbCI6dHJ1ZSwiZW5hYmxlTHlyaWNzUmV0dXJuc1RyZWF0bWVudERXUCI6ImVuYWJsZWQiLCJlbmFibGVMaXZlRXZlbnRzRmVlZExvY2F0aW9uT25ib2FyZGluZyI6dHJ1ZSwiZW5hYmxlQ29uY2VydFVzZXJMb2NhdGlvblNlbGVjdG9yIjp0cnVlLCJlbmFibGVDb25jZXJ0UGFnZUdlbnJlcyI6dHJ1ZSwiZW5hYmxlQ29uY2VydEdlbnJlcyI6dHJ1ZSwiZW5hYmxlQ29ubmVjdERldmljZXNBUEkiOnRydWUsImVuYWJsZUdhdGVkUG9kY2FzdHMiOnRydWUsImVuYWJsZVVzZXJGcmF1ZFZlcmlmaWNhdGlvbiI6dHJ1ZSwiZW5hYmxlVXJpTGlua3MiOnRydWUsImVuYWJsZUJsZW5kSW52aXRhdGlvbiI6Ik1VTFRJX1VTRVIiLCJlbmFibGVVc2VyRnJhdWRTaWduYWxzIjp0cnVlLCJlbmFibGVOZXdUaWNrZXRpbmdTZWN0aW9uIjp0cnVlLCJlbmFibGVDb25jZXJ0c0ludGVyZXN0ZWQiOnRydWUsImVuYWJsZVN0YXRpY0ltYWdlMk9wdGltaXplciI6dHJ1ZSwiZW5hYmxlQ29uY2VydHNUaWNrZXRQcmljZSI6dHJ1ZSwiZW5hYmxlUHJlbWl1bVBhZ2VQcmVwYWlkIjp0cnVlLCJlbmFibGVZb3VyU291bmRDYXBzdWxlTW9kYWwiOnRydWUsImVuYWJsZU1hbmRhbG9yaWFuRWFzdGVyRWdnIjoiSEVMTUVUX0FORF9TT1VORCIsImVuYWJsZVZpZXdNb2RlIjp0cnVlLCJlbmFibGVQb2RjYXN0U3BlZWRDb250cm9sRW5kcG9pbnQiOiJlc3BlcmFudG8iLCJlbmFibGVDYW52YXNOcHYiOiJjYW52YXMtcGxheS1sb29wIiwiZW5hYmxlVmVudWVQYWdlcyI6dHJ1ZSwiZW5hYmxlTGF6eUhvbWVTaGVsdmVzRFdQIjp0cnVlLCJlbmFibGVTaG93UmF0aW5nIjp0cnVlLCJlbmFibGVIb21lSW1wcmVzc2lvbnMiOnRydWUsImVuYWJsZVNlYXJjaEltcHJlc3Npb25zIjp0cnVlLCJlbmFibGVIeWJyaWRIb21lIjp0cnVlLCJlbmFibGVIb21lU3ViZmVlZEZlZWRCYXNlbGluZSI6dHJ1ZSwiZW5hYmxlSHlicmlkSG9tZUZlZWRCYXNlbGluZSI6dHJ1ZSwiZGlzYWJsZUxhdGVzdEVwaXNvZGVPblNob3ciOnRydWUsImVuYWJsZUludGVyYWN0aW9uTG9nZ2VyIjp0cnVlLCJlbmFibGVPZmZsaW5lTW9kZVByZWZldGNoIjp0cnVlLCJlbmFibGVFbmFibGVVc2VyRnJhdWRWZXJpZmljYXRpb24iOnRydWV9
+    </script>
+
+    <!-- Scripts adicionais -->
+    <script src="https://open.spotifycdn.com/cdn/build/web-player/vendor~web-player.2e288442.js"></script>
+    <script src="https://open.spotifycdn.com/cdn/build/web-player/pip-mini-player.afe0b93d.js"></script>
 </body>
 </html>
