@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Musicify</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Musicify</h1>
+    <nav>
+      <ul>
+        <li><a href="#charts">Charts</a></li>
+        <li><a href="#playlists">Playlists</a></li>
+        <li><a href="#favorites">Favorites</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="now-playing">
+      <div id="song-info">
+        <img id="cover" src="" alt="Cover">
+        <div>
+          <h2 id="song-title">Select a Song</h2>
+          <p id="artist-name">Artist</p>
+        </div>
+      </div>
+      <audio id="audio-player" controls></audio>
+    </section>
+    <section id="charts">
+      <h2>Top Charts</h2>
+      <ul id="charts-list"></ul>
+    </section>
+    <section id="playlists">
+      <h2>Your Playlists</h2>
+      <ul id="playlists-list"></ul>
+    </section>
+    <section id="favorites">
+      <h2>Favorites</h2>
+      <ul id="favorites-list"></ul>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
